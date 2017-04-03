@@ -1,0 +1,64 @@
+<div class = "triggercontainer">
+    <div class = "triggerform" >
+        <table class = "triggertable" border = "0" cellpadding = "0" cellspacing = "0" style="border: 1px solid black">
+                <tr vAlign = "top" border="0"><td class = "triggertable-heading" style = "width: 700px;"colspan = "5" rowspan = "1">Trigger Form</td></tr>
+                <tr vAlign = "top"><td class = "triggertable-data" style = "width:633 " colspan = "5" rowspan = "1">Created by Anonymous On {{ todayDate | date:'medium' }} </tr>
+                <tr><td class="triggertable-notes" style="WIDTH: 700px" bgColor=#ffffff width=633 colSpan=5>All fields marked with <FONT color=#ff0000>*</FONT> are mandatory</td></tr>
+                <tr vAlign = "top">
+                    <td width = "663" class = "triggertable-innerOut" rowspan="1" colspan="5">
+                        <li class = "triggertable-inner-form" style="display: inline">
+                            <div align = "center">
+                                <table class = "triggertable-innerIn" style="width: 700px" border = "0" cellspacing = "0" cellpadding = "5">
+                                    <tbody>
+                                        <tr vAlign = "top">
+                                            <td width = "150" class = "triggertable-innerIn-label" rowspan="1" colspan="1">Status  </td>
+                                            <td width = "197"  class = "triggertable-innerIn-values" rowspan="1" colspan="1">In Process  </td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view1">Account Number view1</td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view2">Account Number view2</td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view3">Account Number view3</td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1">1000B-1115  </td>
+                                        </tr>
+                                        <tr vAlign = "top">
+                                            <td width = "150" class = "triggertable-innerIn-label" rowspan="1" colspan="1">Trigger Type <font color ="#ff0000">*</font> </td>
+                                            <td width = "197"  class = "triggertable-innerIn-values" rowspan="1" colspan="1"><select name="selectedVal"  [(ngModel)]="selectedVal" (ngModelChange)="onSelection($event)"><option>Select</option><option *ngFor ="let s of selectOption">{{s}}</option></select></td>                                            
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view1"> Empty value view1</td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view2"> Empty value view2</td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view3"> Empty value view3</td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view1"> Empty value view1 </td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view2"> Empty value view2 </td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view3"> Empty value view3 </td>
+                                        </tr>
+                                        <tr vAlign = "top">
+                                            <td width = "150" class = "triggertable-innerIn-label" rowspan="1" colspan="1">Date (mm/dd/yyyy)</td>
+                                            <td width = "197"  class = "triggertable-innerIn-values" rowspan="1" colspan="1"> <input type = "date" name = "triggerform-date"> </td>                                            
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view1"> Date when Trigger would be executed (mm/dd/yyyy) view1 </td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view2"> Date when Trigger would be executed (mm/dd/yyyy) view2 </td>
+                                            <td width = "110" class = "triggertable-innerIn-label" rowspan="1" colspan="1" *ngIf="view3"> Date when Trigger would be executed (mm/dd/yyyy) view3 </td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view1"> Empty value view1 </td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view2"> Empty value view2 </td>
+                                            <td width = "148" class = "triggertable-innerIn-values"  rowspan="1" colspan="1" *ngIf="view3"> Empty value view3 </td>
+                                        </tr>
+                                        
+                                        <tr vAlign = "top">
+                                            <td width = "150" class = "triggertable-innerIn-label" rowspan="1" colspan="1">Event Description</td>
+                                           <td width = "455" cellspacing = "5" cellpadding = "5" rowspan="1" colspan="3" class = "event-text-area"><textarea rows="6" cols="85" name = "event-description-textarea"></textarea>
+                                        </tr>
+                                        <tr>
+                                           <td width = "150" class = "triggertable-innerIn-label" rowspan="1" colspan="1">Actions To Be Taken</td>
+                                           <td width = "455" cellspacing = "5" cellpadding = "5" rowspan="1" colspan="3" class = "event-text-area"><textarea rows="6" cols="85" name = "event-description-textarea"></textarea>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <div class = "buttoncombo">
+                                <input type = "button" class = "bottoncombo-buttons" name= "savebutton" value = "Save">
+                                 <input type = "button" class = "bottoncombo-buttons" name= "savebutton" value = "Cancel">
+                                  <input type = "button"  class = "bottoncombo-buttons" name= "savebutton" value = "Back">
+                                </div>
+                            </div>
+                        </li>
+                    </td>
+                    
+                </tr>
+        </table>
+    </div>
+</div>
